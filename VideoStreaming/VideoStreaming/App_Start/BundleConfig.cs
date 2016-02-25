@@ -27,6 +27,16 @@ namespace VideoStreaming
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/libs/angular/angular.js"
                 ));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
+                // APP
+                "~/Scripts/app.js",
+                // CONTROLLERS
+                "~/Scripts/controllers/App/AppCtrl.js",
+                "~/Scripts/controllers/Menu/MenuPublicCtrl.js"
+                ));
+
         }
     }
 }
