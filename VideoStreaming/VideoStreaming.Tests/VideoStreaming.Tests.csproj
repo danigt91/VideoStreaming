@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -91,6 +92,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infraestructure\Inicialization\InicializaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
@@ -102,9 +104,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VideoStreaming\VideoStreaming.csproj">
+    <ProjectReference Include="..\VideoStreaming.Domain\VideoStreaming.Domain.csproj">
+      <Project>{720cc57b-9929-4c1e-a679-8a6c4fcade37}</Project>
+      <Name>VideoStreaming.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VideoStreaming.Infraestructure\VideoStreaming.Infraestructure.csproj">
+      <Project>{9fc2045b-5df8-49e4-aca1-12e5ebb7205d}</Project>
+      <Name>VideoStreaming.Infraestructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VideoStreaming\VideoStreaming.Presentation.csproj">
       <Project>{F78B141E-D8E5-467C-AE6D-2F1643EF9420}</Project>
-      <Name>VideoStreaming</Name>
+      <Name>VideoStreaming.Presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
