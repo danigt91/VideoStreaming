@@ -8,12 +8,13 @@ using VideoStreaming.Infraestructure.Data;
 using VideoStreaming.Infraestructure.Data.Contract;
 using VideoStreaming.Infraestructure.Data.Entity;
 using VideoStreaming.Infraestructure.Data.Entity.Contract;
+using VideoStreaming.Infraestructure.Data.Repository;
 using VideoStreaming.Infraestructure.Data.Repository.Contract;
 using VideoStreaming.Infraestructure.Data.Repository.Implementation;
 
 namespace VideoStreaming.CrossCutting.IoC
 {
-    public class PrincipalContainer : UnityContainer
+    class PrincipalContainer : UnityContainer
     {
 
         public PrincipalContainer() : base()
@@ -30,8 +31,8 @@ namespace VideoStreaming.CrossCutting.IoC
             this.RegisterType<IUnitOfWork<IContext>, UnitOfWork>();
 
             /* Repositorio de entidades */
-            this.RegisterType<IDataRepository<EntityBase>, IDataRepository<EntityBase>>();
-            this.RegisterType<IDataRepository<Usuario>, IDataRepository<Usuario>>();
+            this.RegisterType<IDataRepository<EntityBase>, DataRepository<EntityBase>>();
+            this.RegisterType<IDataRepository<Usuario>, UsuarioRepository>();
         }
 
     }

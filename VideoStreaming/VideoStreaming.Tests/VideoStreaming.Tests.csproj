@@ -92,7 +92,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infraestructure\Inicialization\InicializaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />

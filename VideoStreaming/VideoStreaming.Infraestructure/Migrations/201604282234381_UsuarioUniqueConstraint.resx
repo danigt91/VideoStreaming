@@ -117,25 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Usuario_ConfirmPassword_Compare" xml:space="preserve">
-    <value>[ConfirmPassword] no coincide con [Password]</value>
+  <data name="Target" xml:space="preserve">
+    <value>H4sIAAAAAAAEAM1X3W7bNhS+H7B3IHjtmnG6ApshtcicpDBWx1llB7sLaOnYIUaRKkmlNoY92S72SHuFHf3bku04aVcMvrGoc77znX/qn7/+9t6tY0kewVihlU8H/TNKQIU6Emrl09QtX/1I3739/jvvKorX5K6Se53JoaayPn1wLhkyZsMHiLntxyI02uql64c6ZjzS7Pzs7Cc2GDBACIpYhHgfU+VEDPkDPo60CiFxKZcTHYG05Tm+CXJUcsNjsAkPwad3IgIdOAM8Ro79sVoaDtaZNHSpgf4ld5ySCyk4UgtALinhSmnHHRIfzi2gqlarIMEDLmebBFBuyaWF0qFhI36qb2fnmW+sUaygwtQ6HT8TcPC6DBZrq78o5LQOJobzCsPuNpnXeUh9OrcpN0JT0rY1HEmTyZ0U8H6B2y/ReuS4Tq8uJKy37Ncjo1Rmb3wFqTNc9shtupAi/AU2M/07KF+lUm57gr7gu50DPLo1OgHjNh9hWfo3vqSE7eqxtmKttqVTuP4+FRElN2ibLyTUdbIVpcBpA+9BgeEOolvuHBhM8ziCPCId4y1TWI8m+1cZxJBhvCiZ8PUHUCv34NMfsNOuxRqi6qAkMVcC2xR1MKqwh+Rxw7fc2s/aREcMn795819Yxl5fChN/KwIea2q+2wlIxnGB2SvJ7dZt9hbWbk9zYN7K/rAli12fC/QA3G6bWUoaNsV46tcduI91za+ZiKwYidXoZAdmpzfhSYI+bM3S8oQExSAdvQqeP1DiAoOFds9cqdnWlrA7+Apab7MaiOBaGOuy4bHgWc5GUdwR25+NA5GubLYC3h4RTfwrhez/vuzvn3RVulq4TXiv0eMYuz93Hmp6zajtaOZrjktu9syhkZZprA7NsmPazWjZxmhOT0dqWnUbqTk9HanT+9uAnZddXI+1gtzOLuuktzX72+VyrOfaIrX1uvdaPeaV9f70JabTAIUIJRiwR6xCLP5gYx3ERdEFn+RICvS3EZhwJZZYnMV6pHhtOG9de/4/VxBmbSRPu4d88xWfKvEpBZHv66UAQ8mTK/2ZC6+949UjN+EDN3vWylhFsPbpH7nmkIx/uy/jcl+B3M9/7ZGpwQIYkkGPjO085z8kM1xC5M/OzeELrwUN1/Ze/jpb/4X4z1vq3W1z0rI+tquLdvVptMCHWcHzSxd5d3h4bPs7ybsEK1YNRPbVpCDMCqcBrWRwd+kqBejZNqNKpJWhCTgeYYAuDDYCDx2+DsHa/FJ2x2WKIlfxAqKxmqYuSd2FtRAv5M4V12PH7ee3lV3O3jTJnuzXcAFpCnQBpurnVMio5n29p4IOQGS1UvY+ssK7AMKtNjXSjVYnApXhu4QEVDY5ZhAnEsHsVAX8EV7CDWfAB1jxcFPtgMMgTydiN+zepeArw2NbYjT62bc/yz7+3/4LCv8TYi4QAAA=</value>
   </data>
-  <data name="Usuario_ConfirmPassword_Required" xml:space="preserve">
-    <value>[ConfirmPassword] es requerido</value>
-  </data>
-  <data name="Usuario_ConfirmPassword_StringLength" xml:space="preserve">
-    <value>[ConfirmPassword] debe tener entre 5 y 255 caracteres</value>
-  </data>
-  <data name="Usuario_Password_Required" xml:space="preserve">
-    <value>[Password] es requerido</value>
-  </data>
-  <data name="Usuario_Password_StringLength" xml:space="preserve">
-    <value>[Password] debe tener entre 5 y 255 caracteres</value>
-  </data>
-  <data name="Usuario_UserName_Required" xml:space="preserve">
-    <value>[UserName] es requerido</value>
-  </data>
-  <data name="Usuario_UserName_StringLength" xml:space="preserve">
-    <value>[UserName] debe tener entre 1 y 40 carácteres</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

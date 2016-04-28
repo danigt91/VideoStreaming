@@ -61,6 +61,15 @@ namespace VideoStreaming.Infraestructure.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to [ConfirmPassword] no coincide con [Password].
+        /// </summary>
+        internal static string Usuario_ConfirmPassword_Compare {
+            get {
+                return ResourceManager.GetString("Usuario_ConfirmPassword_Compare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [ConfirmPassword] es requerido.
         /// </summary>
         internal static string Usuario_ConfirmPassword_Required {

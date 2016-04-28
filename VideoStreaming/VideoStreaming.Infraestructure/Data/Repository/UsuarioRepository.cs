@@ -10,12 +10,12 @@ using VideoStreaming.Infraestructure.Data.Repository.Implementation;
 
 namespace VideoStreaming.Infraestructure.Data.Repository
 {
-    class UsuarioRepository : DataRepository<Usuario>
+    public class UsuarioRepository : DataRepository<Usuario>
     {
 
         public UsuarioRepository(IUnitOfWork<IContext> _context) : base(_context)
         {
-
+            
         }
 
     }

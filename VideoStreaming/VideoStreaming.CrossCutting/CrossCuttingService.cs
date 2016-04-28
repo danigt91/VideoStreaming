@@ -18,5 +18,10 @@ namespace VideoStreaming.CrossCutting
             _container = new PrincipalContainer();
         }
 
+        public static I ResolveCustomType<I>()
+        {
+            return _container.Resolve<I>();
+        }
+
     }
 }

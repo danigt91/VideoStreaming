@@ -10,21 +10,21 @@ using VideoStreaming.Infraestructure.Data.Repository.Contract;
 
 namespace VideoStreaming.Infraestructure.Data.Repository.Implementation
 {
-    abstract class DataRepository<TEntity> : IDataRepository<TEntity> where TEntity : EntityBase
+    public abstract class DataRepository<TEntity> : IDataRepository<TEntity> where TEntity : EntityBase
     {
-        protected IUnitOfWork<IContext> context
+        protected IUnitOfWork<IContext> _context
         {
             get; set;
         }
 
-        public DataRepository(IUnitOfWork<IContext> _contexto)
+        public DataRepository(IUnitOfWork<IContext> context)
         {
-            _contexto = context;
+            _context = context;
         }
 
         public DbSet<TEntity> Set()
         {
-            return context.Set(typeof(TEntity)).Cast<TEntity>();
+            return _context.Set(typeof(TEntity)).Cast<TEntity>();
         }
 
         public IQueryable<TEntity> All()
@@ -39,22 +39,22 @@ namespace VideoStreaming.Infraestructure.Data.Repository.Implementation
 
         public TEntity Create(TEntity entity)
         {
-            context.Entry(entity).Cast<TEntity>().State = EntityState.Added;
-            context.Save();
+            _context.Entry(entity).Cast<TEntity>().State = EntityState.Added;
+            _context.Save();
             return entity;
         }
 
         public TEntity Update(TEntity entity)
         {
-            context.Entry(entity).Cast<TEntity>().State = EntityState.Modified;
-            context.Save();
+            _context.Entry(entity).Cast<TEntity>().State = EntityState.Modified;
+            _context.Save();
             return entity;
         }
 
         public TEntity Remove(TEntity entity)
         {
-            context.Entry(entity).Cast<TEntity>().State = EntityState.Deleted;
-            context.Save();
+            _context.Entry(entity).Cast<TEntity>().State = EntityState.Deleted;
+            _context.Save();
             return entity;
         }
 
