@@ -1048,6 +1048,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VideoStreaming.CrossCutting\VideoStreaming.CrossCutting.csproj">
+      <Project>{99f4b9c4-6d96-43e3-b3a8-7dc3cbf6d0bb}</Project>
+      <Name>VideoStreaming.CrossCutting</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

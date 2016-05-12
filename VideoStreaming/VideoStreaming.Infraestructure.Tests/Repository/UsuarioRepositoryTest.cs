@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
-using VideoStreaming.CrossCutting;
+using VideoStreaming.CrossCutting.Service;
 using VideoStreaming.Infraestructure.Data.Entity;
 using VideoStreaming.Infraestructure.Data.Repository.Contract;
 using System.Diagnostics;
@@ -22,8 +22,8 @@ namespace VideoStreaming.Infraestructure.Tests.Repository
         [AssemblyInitialize]
         public static void InjectMocks(TestContext context)
         {
-            CrossCuttingService.UnityInject();
-            _usuario = CrossCuttingService.ResolveCustomType<IDataRepository<Usuario>>();
+            DependencyResolverService.Register();
+            _usuario = DependencyResolverService.ResolveCustomType<IDataRepository<Usuario>>();
         }
 
         [TestMethod]

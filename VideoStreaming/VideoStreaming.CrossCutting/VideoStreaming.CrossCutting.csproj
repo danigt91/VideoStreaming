@@ -65,7 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrossCuttingService.cs" />
+    <Compile Include="Service\DependencyResolverService.cs" />
     <Compile Include="IoC\PrincipalContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -81,10 +81,6 @@
     <ProjectReference Include="..\VideoStreaming.Infraestructure\VideoStreaming.Infraestructure.csproj">
       <Project>{9fc2045b-5df8-49e4-aca1-12e5ebb7205d}</Project>
       <Name>VideoStreaming.Infraestructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\VideoStreaming\VideoStreaming.Presentation.csproj">
-      <Project>{f78b141e-d8e5-467c-ae6d-2f1643ef9420}</Project>
-      <Name>VideoStreaming.Presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

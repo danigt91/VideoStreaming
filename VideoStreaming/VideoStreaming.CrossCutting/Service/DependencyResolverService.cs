@@ -1,14 +1,14 @@
 ﻿using Microsoft.Practices.Unity;
 using VideoStreaming.CrossCutting.IoC;
 
-namespace VideoStreaming.CrossCutting
+namespace VideoStreaming.CrossCutting.Service
 {
-    public static class CrossCuttingService
+    public static class DependencyResolverService
     {
 
         static UnityContainer _container;
 
-        public static void UnityInject()
+        public static void Register()
         {
             _container = new PrincipalContainer();
         }
