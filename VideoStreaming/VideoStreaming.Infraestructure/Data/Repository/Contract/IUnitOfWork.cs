@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VideoStreaming.Infraestructure.Data.Contract;
+using VideoStreaming.Infraestructure.Data.Entity.Contract;
 
 namespace VideoStreaming.Infraestructure.Data.Repository.Contract
 {
@@ -14,7 +11,7 @@ namespace VideoStreaming.Infraestructure.Data.Repository.Contract
 
         void Save();
 
-        DbSet Set(Type t);
+        DbSet<TEntity> Set<TEntity>() where TEntity : EntityBase;
 
         DbEntityEntry Entry(object entity);
 

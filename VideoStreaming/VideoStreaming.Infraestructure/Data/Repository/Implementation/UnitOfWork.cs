@@ -4,8 +4,8 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using VideoStreaming.Infraestructure.Data.Contract;
+using VideoStreaming.Infraestructure.Data.Entity.Contract;
 using VideoStreaming.Infraestructure.Data.Repository.Contract;
 
 namespace VideoStreaming.Infraestructure.Data.Repository.Implementation
@@ -13,26 +13,26 @@ namespace VideoStreaming.Infraestructure.Data.Repository.Implementation
     public class UnitOfWork : IUnitOfWork<IContext>
     {
 
-        private IContext context;
+        private IContext _context;
 
-        public UnitOfWork(IContext _context)
+        public UnitOfWork(IContext context)
         {
-            context = _context;
+            _context = context;
         }
 
         public void Save()
         {
-            context.SaveChanges();
+            _context.SaveChanges();
         }
 
-        public DbSet Set(Type t)
+        public DbSet<TEntity> Set<TEntity>() where TEntity : EntityBase
         {
-            return context.Set(t);
+            return _context.Set<TEntity>();
         }
 
         public DbEntityEntry Entry(object entity)
         {
-            return context.Entry(entity);
+            return _context.Entry(entity);
         }
 
 
@@ -44,7 +44,7 @@ namespace VideoStreaming.Infraestructure.Data.Repository.Implementation
             {
                 if (disposing)
                 {
-                    context.Dispose();
+                    _context.Dispose();
                 }
             }
             this.disposed = true;

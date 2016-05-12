@@ -1,15 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VideoStreaming.CrossCutting;
 using VideoStreaming.Infraestructure.Data.Entity;
 using VideoStreaming.Infraestructure.Data.Repository.Contract;
 using System.Diagnostics;
 using System.Data.Entity.Validation;
 using System.Data.Entity.Infrastructure;
+using VideoStreaming.Infraestructure.Service.Implementation;
 
 namespace VideoStreaming.Infraestructure.Tests.Repository
 {
@@ -19,8 +17,7 @@ namespace VideoStreaming.Infraestructure.Tests.Repository
     {
 
         private static IDataRepository<Usuario> _usuario;
-
-
+        
 
         [AssemblyInitialize]
         public static void InjectMocks(TestContext context)
@@ -33,6 +30,17 @@ namespace VideoStreaming.Infraestructure.Tests.Repository
         public void InjectionIsOK()
         {
             var x = _usuario.All().Count();
+            Trace.WriteLine("Inyeccion de dependencias ok");
+        }
+
+
+        [TestMethod]
+        public void AutoMapperEF6IsOK()
+        {
+            var x = _usuario.All();
+            var auto = new AutoMapperEF6<Usuario, UsuarioDTOTest>();
+            var xMap = auto.Map(x);
+
             Trace.WriteLine("Inyeccion de dependencias ok");
         }
 

@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VideoStreaming.Infraestructure.Data.Contract;
 using VideoStreaming.Infraestructure.Data.Entity.Contract;
 using VideoStreaming.Infraestructure.Data.Repository.Contract;
 
 namespace VideoStreaming.Infraestructure.Data.Repository.Implementation
 {
-    public abstract class DataRepository<TEntity> : IDataRepository<TEntity> where TEntity : EntityBase
+    public sealed class DataRepository<TEntity> : IDataRepository<TEntity> where TEntity : EntityBase
     {
-        protected IUnitOfWork<IContext> _context
+        private IUnitOfWork<IContext> _context
         {
             get; set;
         }
@@ -24,7 +21,7 @@ namespace VideoStreaming.Infraestructure.Data.Repository.Implementation
 
         public DbSet<TEntity> Set()
         {
-            return _context.Set(typeof(TEntity)).Cast<TEntity>();
+            return _context.Set<TEntity>();
         }
 
         public IQueryable<TEntity> All()
